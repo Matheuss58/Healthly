@@ -1,0 +1,60 @@
+/* CORREÇÃO DO GRADIENTE */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #038cd6, #18f836);
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.titulo {
+  background-color: #038cd6;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin-bottom: 100px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.avatar-central {
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 100px;
+}
+
+.botoes {
+  display: flex;
+  gap: 20px;
+}
+
+.botao-rotina, .botao-central {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao-central {
+  background-color: var(--cinza);
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.botao-rotina {
+  background-color: var(--azul-escuro);
+  color: white;
+}
+
+.botao-rotina:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}

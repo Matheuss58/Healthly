@@ -1,0 +1,182 @@
+/* ====================== */
+/* SISTEMA COMPLETO DE CORES */
+/* ====================== */
+:root {
+  /* Cores Primárias (Gradiente) */
+  --azul-profundo: #003554;
+  --azul-escuro: #0077B6;
+  --azul-medio: #0096C7;
+  --azul-claro: #48CAE4;
+  --azul-piscina: #00B4D8;
+  --verde-azulado: #00C9B1;
+  
+  /* Cores Secundárias */
+  --verde-menta: #4FFBDF;
+  --verde-vibrante: #00FFD1;
+  --ciano: #0AEFFF;
+  
+  /* Tons Neutros */
+  --branco-gelo: #F8FDFF;
+  --branco: #FFFFFF;
+  --cinza-claro-1: #F8F9FA;
+  --cinza-claro-2: #E9ECEF;
+  --cinza-medio: #DEE2E6;
+  --cinza-escuro-1: #ADB5BD;
+  --cinza-escuro-2: #6C757D;
+  --preto-suave: #343A40;
+  --preto: #000000;
+  
+  /* Cores de Feedback */
+  --sucesso: #28A745;
+  --erro: #DC3545;
+  --alerta: #FFC107;
+  --info: #17A2B8;
+  
+  /* Cores Adicionais */
+  --roxo-claro: #B388FF;
+  --rosa-claro: #FF80AB;
+  --laranja: #FF9100;
+  
+  /* Gradientes Prontos */
+  --gradiente-principal: linear-gradient(135deg, var(--azul-escuro), var(--azul-piscina));
+  --gradiente-vertical: linear-gradient(to bottom, var(--azul-profundo), var(--verde-azulado));
+  --gradiente-detalhado: linear-gradient(
+    135deg,
+    var(--azul-profundo) 0%,
+    var(--azul-escuro) 30%,
+    var(--azul-piscina) 70%,
+    var(--verde-menta) 100%
+  );
+  
+  /* Tipografia */
+  --fonte-principal: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  --fonte-secundaria: 'Montserrat', sans-serif;
+  --fonte-monospace: 'Fira Code', monospace;
+  
+  /* Sombras */
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --sombra-media: 0 8px 24px rgba(0, 119, 182, 0.2);
+  --sombra-texto: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Bordas */
+  --borda-fina: 1px solid var(--cinza-claro-2);
+  --borda-arredondada: 12px;
+  --borda-circular: 50%;
+  
+  /* Espaçamentos */
+  --espacamento-xs: 4px;
+  --espacamento-sm: 8px;
+  --espacamento-md: 16px;
+  --espacamento-lg: 24px;
+  --espacamento-xl: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+}
+
+body {
+  background: linear-gradient(135deg, #038cd6, #18f836);
+  min-height: 100vh;
+  color: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Modal (compartilhado) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-conteudo {
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fechar-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-corpo input, .modal-corpo textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--cinza);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.modal-rodape {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-rodape button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-salvar {
+  background-color: var(--azul-escuro);
+  color: white;
+}
+
+.botao-rotina {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao-central {
+  background-color: var(--cinza);
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.botao-rotina {
+  background-color: var(--azul-escuro);
+  color: white;
+}
+
+.botao-rotina:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}

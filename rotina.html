@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthly - Rotina</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rotina.css">
+</head>
+<body class="rotina">
+  <div class="container">
+    <div class="barra-lateral">
+      <img src="assets/img/icones/engrenagem.png" alt="Configurações" title="Configurações (Futuro)">
+      <img src="assets/img/icones/calendario.png" alt="Calendário" onclick="window.location.href='calendario.html'">
+      <img src="assets/img/icones/alarme.png" alt="Alarmes" onclick="window.location.href='alarmes.html'">
+      <img src="assets/img/icones/relatorio.png" alt="Relatório" title="Relatório (Futuro)">
+      <img src="assets/img/icones/pareamento.png" alt="Pareamento" title="Pareamento (Futuro)">
+      <img src="assets/img/icones/ajuda.png" alt="Ajuda" title="Ajuda (Futuro)">
+      <img src="assets/img/icones/notificacoes.png" alt="Central" title="Central (Futuro)">
+      <img src="assets/img/icones/conta.png" alt="Conta" onclick="window.location.href='cadastro.html'">
+    </div>
+    
+    <div class="conteudo">
+      <div class="ia-container">
+        <div class="ia-header">
+          <img src="assets/img/ia-avatar.png" alt="IA Healthly" class="ia-avatar">
+          <h3>Assistente HLT</h3>
+        </div>
+        
+        <div class="ia-conversa" id="ia-mensagens">
+          <div class="mensagem ia">
+            <p>Olá! Sou seu assistente de rotinas saudáveis. Como posso ajudar?</p>
+          </div>
+        </div>
+        
+        <div class="ia-input-container">
+          <input type="text" id="ia-pergunta" placeholder="Ex: Como criar uma rotina matinal?">
+          <button id="ia-enviar">
+            <img src="assets/img/icones/enviar.png" alt="Enviar">
+          </button>
+        </div>
+      </div>
+      
+      <textarea id="texto-rotina" placeholder="Escreva sua rotina aqui..."></textarea>
+    </div>
+  </div>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/rotina.js"></script>
+</body>
+</html>

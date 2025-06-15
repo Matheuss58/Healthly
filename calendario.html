@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthly - Calendário</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/calendario.css">
+</head>
+<body class="calendario">
+  <div class="container">
+    <div id="calendario-2025"></div>
+    <button onclick="window.location.href='rotina.html'" class="botao-rotina">ROTINA</button>
+  </div>
+
+  <!-- Modal para eventos -->
+  <div id="modal-evento" class="modal">
+    <div class="modal-conteudo">
+      <div class="modal-cabecalho">
+        <h2 id="modal-titulo"></h2>
+        <button class="fechar-modal" onclick="fecharModal()">&times;</button>
+      </div>
+      <div class="modal-corpo">
+        <input type="hidden" id="evento-dia">
+        <input type="hidden" id="evento-mes">
+        <input type="hidden" id="evento-ano">
+        
+        <input type="time" id="evento-hora" placeholder="Hora" required>
+        <input type="text" id="evento-titulo" placeholder="Título do evento" required>
+        <textarea id="evento-descricao" placeholder="Descrição (opcional)"></textarea>
+      </div>
+      <div class="modal-rodape">
+        <button onclick="removerEvento()" class="btn-remover">Remover</button>
+        <button onclick="salvarEvento()" class="btn-salvar">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/calendario.js"></script>
+</body>
+</html>

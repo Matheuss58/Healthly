@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthly - Alarmes</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/alarmes.css">
+</head>
+<body class="alarmes">
+  <div class="container">
+   <button class="btn-novo-alarme">+ NOVO ALARME</button>
+    <div id="lista-alarmes"></div>
+    <button onclick="window.location.href='rotina.html'" class="botao-rotina">ROTINA</button>
+  </div>
+
+  <!-- Modal para alarmes -->
+  <div id="modal-alarme" class="modal">
+    <div class="modal-conteudo">
+        <div class="modal-cabecalho">
+            <h2 id="alarme-titulo">Novo Alarme</h2>
+            <button class="fechar-modal" onclick="fecharModalAlarme()">&times;</button>
+        </div>
+
+        <form id="form-alarme">
+            <div class="modal-corpo">
+                <input type="hidden" id="alarme-index">
+
+                <label for="alarme-hora">Horário:</label>
+                <input type="time" id="alarme-hora" required>
+
+                <label for="alarme-descricao">Descrição:</label>
+                <input type="text" id="alarme-descricao" placeholder="Descrição (opcional)">
+
+                <label for="alarme-som">Som:</label>
+                <select id="alarme-som" class="alarme-som">
+                    <option value="Padrão.mp3">Som Padrão</option>
+                    <option value="Notificação.mp3">Notificação Suave</option>
+                    <option value="alerta.mp3">Alerta Urgente</option>
+                </select>
+            </div>
+
+            <div class="modal-rodape">
+                <button type="submit" class="btn-salvar">Salvar</button>
+                <button type="button" class="btn-cancelar" onclick="fecharModalAlarme()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/alarmes.js"></script>
+</body>
+</html>
